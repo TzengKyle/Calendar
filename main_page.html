@@ -1,0 +1,121 @@
+</html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- link fontawesome -->
+    <script src="https://kit.fontawesome.com/0567583678.js" crossorigin="anonymous"></script>
+    <!-- link fontawesome -->
+
+    <!-- ICONICONs -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+    <!-- link my css -->
+    <link rel="stylesheet" href="the_css.css">
+
+    <!-- link xlsx.full.min -->
+    <!-- <script src="sheetjs-github/dist/xlsx.core.min.js"></script> -->
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+
+    <script>
+        menuToggle_flag = 1;
+    </script>
+
+</head>
+
+<body>
+
+    <!-- main_page的左右兩個iframe -->
+    <iframe class="html_component" id="side_nav" src="./side_nav.html" frameborder="0"></iframe>
+    <iframe class="html_component" id="profile_nav" src="./profile_nav.html" frameborder="0"></iframe>
+
+    <div id="main" class="main">
+        <!-- topbar -->
+        <div class="topbar">
+            <div class="search">
+                <span><input id="search-year" type="number" placeholder="YEAR" min="0"></span>
+                <span><input id="search-month" type="number" placeholder="MONTH" min="1" max="12"></span>
+                <span id="gotoDate" class="icon"><ion-icon name="search-outline"></ion-icon></span>
+                <span id="gotoToday">TODAY</span>
+            </div>
+        </div>
+
+        <!-- calendar -->
+        <div class="calendar">
+            <div class="month">
+                <span id="prevMonth" class="icon"><ion-icon name="caret-back-outline"></ion-icon></span>
+                <div class="date">December 2015</div>
+                <span id="nextMonth" class="icon"><ion-icon name="caret-forward-outline"></ion-icon></span>
+            </div>
+            <div class="weekdays">
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday">Sat</div>
+                <div class="weekday">Sun</div>
+            </div>
+            <div class="days"></div>
+        </div>
+
+        <!-- TODO list -->
+        <div class="activeDay">
+            <div class="activeDay_title">
+                <div class="event_day">DEFALUT</div>
+                <div class="event_date">DEFALUT</div>
+                <hr>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="diary" id="diary">
+            <div class="diary_title">Diary</div>
+            <div class="diary_emo_select_bar">
+                <i class="fa-solid fa-face-laugh-squint emo_icon" id="bigLaugh"></i>
+                <i class="fa-solid fa-face-laugh emo_icon" id="Laugh"></i>
+                <i class="fa-solid fa-face-meh emo_icon" id="noFace"></i>
+                <i class="fa-solid fa-face-frown-open emo_icon" id="sad"></i>
+                <i class="fa-solid fa-face-frown emo_icon" id="bigSad"></i>
+                <i class="fa-solid fa-face-sad-tear emo_icon" id="tear"></i>
+                <i class="fa-solid fa-face-angry emo_icon" id="angry"></i>
+                <i class="fa-solid fa-face-sad-cry emo_icon" id="bigTear"></i>
+                <i class="fa-solid fa-face-rolling-eyes emo_icon" id="whiteEye"></i>
+                <i class="fa-solid fa-face-flushed emo_icon" id="shock"></i>
+                <i class="fa-solid fa-face-dizzy emo_icon" id="deadFace"></i>
+            </div>
+            <div class="diary_content">
+                <textarea id="test" placeholder="Write some words!"></textarea>
+            </div>
+            <div class="diary_save">
+                <div id="diary_save_btn">SAVE</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main_page.js"></script>
+
+
+</body>
+
+</html>
